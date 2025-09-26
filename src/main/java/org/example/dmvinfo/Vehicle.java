@@ -26,9 +26,9 @@ public abstract class Vehicle {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Vehicle Information:\n");
-        sb.append("\tVIN: ").append(vin).append("\n");
-        sb.append("\tManufacture Year: ").append(manufactureYear).append("\n");
-        sb.append("\tVehicle Type: ").append(vehicleType).append("\n");
+        sb.append("VIN: ").append(vin).append("\n");
+        sb.append("Manufacture Year: ").append(manufactureYear).append("\n");
+        sb.append("Vehicle Type: ").append(vehicleType).append("\n");
         return sb.toString();
     }
 }
