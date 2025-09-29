@@ -17,19 +17,19 @@ public enum EVehicleTypes {
     }
 
 
-    public String toString(int tabLevel) {
-        String tabs = "\t".repeat(Math.max(0, tabLevel));
-        StringBuilder sb = new StringBuilder();
-        sb.append(tabs)
-                .append("Vehicle Type: ")
-                .append(displayName)
-                .append("\n");
-        return sb.toString();
-    }
+//    public String toString(int tabLevel) {
+//        String tabs = "\t".repeat(Math.max(0, tabLevel));
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(tabs)
+//                .append("Vehicle Type: ")
+//                .append(displayName)
+//                .append("\n");
+//        return sb.toString();
+//    }
 
-    @Override
-    public String toString() {
-        return toString(0);
-    }
+//    @Override
+//    public String toString() {
+//        return toString(0);
+//    }
 
 }
