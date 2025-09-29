@@ -23,9 +23,19 @@ public class FordModel extends PassengerVehicle {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(super.toString());
-        sb.append("Model: ").append(model).append("\n");
+        sb.append(toString(0, sb));
         return sb.toString();
+    }
+
+    @Override
+    protected int toString(int tabLevel, StringBuilder sb) {
+        int newTabLevel = super.toString(tabLevel, sb);
+        String tabs = "\t".repeat(Math.max(0, newTabLevel));
+        sb.append(tabs)
+                .append("Model: ")
+                .append(model)
+                .append("\n");
+        return newTabLevel;
     }
 
 }

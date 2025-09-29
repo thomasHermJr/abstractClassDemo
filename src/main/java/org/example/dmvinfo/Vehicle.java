@@ -31,4 +31,25 @@ public abstract class Vehicle {
         sb.append("Vehicle Type: ").append(vehicleType).append("\n");
         return sb.toString();
     }
+
+
+    protected int toString(int tabLevel, StringBuilder sb) {
+        String tabs = "\t".repeat(Math.max(0, tabLevel));
+        sb.append(tabs)
+                .append("Vehicle Information:\n");
+        String innerTabs = "\t".repeat(Math.max(0, tabLevel + 1));
+        sb.append(innerTabs)
+                .append("VIN: ")
+                .append(vin)
+                .append("\n");
+        sb.append(innerTabs)
+                .append("Manufacture Year: ")
+                .append(manufactureYear)
+                .append("\n");
+        sb.append(innerTabs)
+                .append("Vehicle Type: ")
+                .append(vehicleType.getDisplayName())
+                .append("\n");
+        return tabLevel + 1;
+    }
 }
